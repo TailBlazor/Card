@@ -2,15 +2,16 @@
 
 name: .NET
 
+env:
+  NAME: TailBlazor.Card
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 defaults:
   run:
-    working-directory: ./src/TailBlazor.Card
+    working-directory: ./src/${NAME}
 jobs:
   build:
 
@@ -31,6 +32,6 @@ jobs:
     - name: Publish
       uses: brandedoutcast/publish-nuget@v2.5.5  
       with:
-        PROJECT_FILE_PATH:  src/TailBlazor.Card/TailBlazor.Card.csproj
+        PROJECT_FILE_PATH:  src/${NAME}/${NAME}.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
 
