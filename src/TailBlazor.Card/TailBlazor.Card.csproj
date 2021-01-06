@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>TailBlazor.Card</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Taylor Watson</Authors>
+    <Company></Company>
+    <PackageTags>Blazor; Tailwindcss; Tailwind css; tailwind; card;</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/TailBlazor/Card</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/TailBlazor/Card</RepositoryUrl>
+    <Description>
+      A Blazor card component based off TailWindCss. It has the bare minimum styles to function with the option to add your own classes. It's built so it can be fully customizable and reusable.
+    </Description>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
