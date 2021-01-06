@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>TailBlazor.Card</PackageId>
-    <Version>1.0.0</Version>
+    <RootNamespace>TailBlazor.Card</RootNamespace>
+    <Version>1.0.1</Version>
     <Authors>Taylor Watson</Authors>
-    <Company></Company>
-    <PackageTags>Blazor; Tailwindcss; Tailwind css; tailwind; card;</PackageTags>
+    <IsPackage>true</IsPackage>
+    <PackageTags>Blazor; TailBlazorcss; TailBlazor css; tailwind; tailwindcss; Card; Cards;</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -18,9 +18,11 @@
     </Description>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
-  
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
@@ -29,4 +31,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="../../logo.png" Pack="true" PackagePath="">
+      <LinkBase>assets</LinkBase>
+    </None>
+    <None Include="../../LICENSE" Pack="true" PackagePath="">
+      <LinkBase>assets</LinkBase>
+    </None>
+  </ItemGroup>
 </Project>
