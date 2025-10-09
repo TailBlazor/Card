@@ -1,8 +1,8 @@
+@attribute [RenderModeInteractiveAuto]
 @namespace TailBlazor.Card
 
-<CascadingValue Value=this>
-    <div class="@(Class ?? _baseClass + (!_hasSectionContent ? "p-4" : "divide-y divide-gray-200"))">
+<CascadingValue Value="this">
+    <div class="@ContainerClass">
         @ChildContent
     </div>
 </CascadingValue>
-

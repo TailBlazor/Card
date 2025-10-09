@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Components;
 
+namespace TailBlazor.Card;
 
-namespace TailBlazor.Card
+public partial class TailBlazorCardSection
 {
-    public partial class TailBlazorCardSection
-    {
-        [CascadingParameter] public TailBlazorCard Card { get; set; }
-        [Parameter] public RenderFragment ChildContent { get; set; }
-        [Parameter] public string Class { get; set; } = "p-4";
+    [CascadingParameter] public TailBlazorCard? Card { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string Class { get; set; } = "p-4";
 
-        protected override void OnInitialized() => Card.HasSectionContent();
+    protected override void OnInitialized()
+    {
+        Card?.NotifySectionContent();
     }
 }
